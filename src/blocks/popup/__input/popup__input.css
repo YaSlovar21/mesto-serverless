@@ -1,0 +1,33 @@
+.popup__input {
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+    min-height: 27px;
+    line-height: 24px;
+    outline: none;
+  }
+
+.popup__input:nth-of-type(1) {
+  margin-bottom: 5px;
+}
+.popup__input:nth-of-type(2) {
+  margin-top: 25px;
+  margin-bottom: 10px;
+  /*+35 верхний отступ от кнопки*/
+}
+
+@media (max-width: 480px) {
+    .popup__input:nth-of-type(1) {
+      margin-bottom: 5px;
+    }
+    .popup__input:nth-of-type(2) {
+      margin-top: 25px;
+      margin-bottom: 10px;
+      /*+35 верхний отступ от кнопки*/
+    }
+}
+
+.popup__input:focus {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+}
