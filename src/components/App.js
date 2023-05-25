@@ -60,22 +60,24 @@ function App() {
     api
       .changeLikeCardStatus(card.id, !isLiked)
       .then((newCard) => {
+        console.log(newCard)
         setUserCards((userCards) => {
-          return userCards.map((c) => (c.id === card._id ? newCard : c));
+          return userCards.map((c) => (c.id === card.id ? newCard : c));
         });
       })
       .catch((err) => console.log(err));
   }
 
   function handleCardDelete(card) {
-    api
+    /*api
       .deleteCard(card.id)
       .then(() => {
         setUserCards((userCards) => {
           return userCards.filter((c) => c.id !== card.id);
         });
       })
-      .catch((err) => console.log(err));
+      .catch((err) => console.log(err));*/
+      
   }
 
   function handleEditAvatarClick() {
@@ -98,19 +100,26 @@ function App() {
     setIsImagePopupOpen(true);
   }
 
-  function handleUpdateUser(name, desc) {
+  //на самом деле обработчик удаления карточки
+  function handleUpdateUser(card) {
     //обрабочик <EditProfilePopup.. onUpdateUser=... />   (Новые данные поднимаются из дочернего popupwithForm, где происходит сабмит)
-    setIsFetching(true);
-    api
-      .setInfoUser(name, desc)
-      .then((userData) => {
-        setCurrentUser(userData);
-        closeAllPopups();
-      })
-      .catch((err) => console.log(err))
-      .finally(()=> {
-        setIsFetching(false);
+ //   setIsFetching(true);
+ //   api.setInfoUser(name, desc).then((userData) => {
+  //      setCurrentUser(userData);
+  //      closeAllPopups();
+ //     }).catch((err) => console.log(err))
+ //     .finally(()=> {
+  //      setIsFetching(false);
+ //     });
+ // }
+   api
+    .deleteCard(card.id)
+    .then(() => {
+      setUserCards((userCards) => {
+        return userCards.filter((c) => c.id !== card.id);
       });
+    })
+    .catch((err) => console.log(err));
   }
 
   function handleUpdateAvatar(link) {
@@ -134,6 +143,7 @@ function App() {
     api
       .addCard(name, link)
       .then((newCard) => {
+        console.log(newCard);
         setUserCards([newCard, ...userCards]);
         closeAllPopups();
       })
@@ -231,8 +241,8 @@ function App() {
       <EditProfilePopup
         isOpen={isProfilePopupOpen}
         onClose={closeAllPopups}
-        onUpdateUser={handleUpdateUser}
-        buttonText={isFetching ? "Сохранение..." : "Сохранить"}
+        onUpdateUser={handleUpdateUser /*на самом деле удаление карточки*/}
+        buttonText={isFetching ? "Удаление..." : "Да"}
       />
 
       <AddPlacePopup
@@ -241,12 +251,12 @@ function App() {
         onAddCard={handleAddPlace}
         buttonText={isFetching ? "Добавление..." : "Добавить"}
       />
-
+      
       <EditAvatarPopup
         isOpen={isAvatarPopupOpen}
         onClose={closeAllPopups}
         onUpdateAvatar={handleUpdateAvatar}
-        buttonText={isFetching ? "Сохранение..." : "Сохранить"}
+        buttonText={isFetching ? "Сохранение..." : "Lf"}
       />
 
       <ImagePopup

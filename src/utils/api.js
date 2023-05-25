@@ -144,7 +144,8 @@ class Api {
 }
 
 export default new Api({
-    baseUrl: 'https://d5d11c4rja6fao88re26.apigw.yandexcloud.net',
+    //baseUrl: 'https://d5d11c4rja6fao88re26.apigw.yandexcloud.net',
+    baseUrl: 'https://api.app-mesto.kupcov.com',
     headers: {
       // authorization: '7ca5b34f-d430-4580-a7ad-8a26fa855204',
       'Content-Type': 'application/json',

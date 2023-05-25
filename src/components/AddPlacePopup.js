@@ -57,7 +57,6 @@ function AddPlacePopup(props) {
         type="url"
         placeholder="Ссылка на картинку"
         name="link"
-        required
       />
       <span className="popup__input-error place-link-input-error"></span>
     </PopupWithForm>

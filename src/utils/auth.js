@@ -1,6 +1,7 @@
 //export const BASE_URL = 'https://auth.nomoreparties.co';
-export const BASE_URL = 'https://d5d11c4rja6fao88re26.apigw.yandexcloud.net';
+//export const BASE_URL = 'https://d5d11c4rja6fao88re26.apigw.yandexcloud.net';
 
+export const BASE_URL = 'https://api.app-mesto.kupcov.com';
 
 export const login = (code) => {
   console.log(JSON.stringify({code}));
