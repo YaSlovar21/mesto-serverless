@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.417b3db3.chunk.css",
-    "main.js": "/static/js/main.d280bbcd.chunk.js",
-    "main.js.map": "/static/js/main.d280bbcd.chunk.js.map",
+    "main.js": "/static/js/main.1269047a.chunk.js",
+    "main.js.map": "/static/js/main.1269047a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.125b9600.js",
     "runtime-main.js.map": "/static/js/runtime-main.125b9600.js.map",
     "static/js/2.5498b341.chunk.js": "/static/js/2.5498b341.chunk.js",
@@ -13,6 +13,7 @@
     "static/css/main.417b3db3.chunk.css.map": "/static/css/main.417b3db3.chunk.css.map",
     "static/js/2.5498b341.chunk.js.LICENSE.txt": "/static/js/2.5498b341.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/like-svg.1ad06e85.svg",
+    "static/media/RU.69ba8e98.svg": "/static/media/RU.69ba8e98.svg",
     "static/media/logo-mesto.bbe2a6ea.svg": "/static/media/logo-mesto.bbe2a6ea.svg",
     "static/media/profile-plus.bed8c136.svg": "/static/media/profile-plus.bed8c136.svg",
     "static/media/smtWrong.d4ce2a26.svg": "/static/media/smtWrong.d4ce2a26.svg",
@@ -22,6 +23,6 @@
     "static/js/runtime-main.125b9600.js",
     "static/js/2.5498b341.chunk.js",
     "static/css/main.417b3db3.chunk.css",
-    "static/js/main.d280bbcd.chunk.js"
+    "static/js/main.1269047a.chunk.js"
   ]
 }

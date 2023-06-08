@@ -204,7 +204,7 @@ function App() {
   function handleSignOut() {
     logout()
       .then(() => {
-        history.push("/sign-in");
+        history.push("/sign-in-ya");
         setLoggedIn(false);
       })
       .catch(err => console.log(err));
@@ -235,6 +235,9 @@ function App() {
 
         <Route path="/sign-in">
           <Login handleLogin={handleLogin} />
+        </Route>
+        <Route path="/sign-in-ya">
+          <Register />
         </Route>
       </Switch>
 

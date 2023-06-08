@@ -16,7 +16,24 @@ class Api {
             credentials: 'include',
         })
         .then((response) => {
-            return this.checkResponseIsOk(response);
+            //return this.checkResponseIsOk(response).sort((a, b) => a.date < b.date);
+            if (response.ok) {
+                return response.json();
+            } else {
+                return Promise.reject(`Ошибка: ${response.status}`);
+            }
+        })
+        .then((data)=> {
+            console.log(data);
+            return data.sort((a, b) => {
+                if (a.date.toLowerCase() < b.date.toLowerCase()) {
+                  return 1;
+                }
+                if (a.date.toLowerCase() > b.date.toLowerCase()) {
+                  return -1;
+                }
+                return 0;
+              });
         })
     }
 
